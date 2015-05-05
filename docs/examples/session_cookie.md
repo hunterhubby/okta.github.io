@@ -60,7 +60,7 @@ Content-Type: application/json
 After your login flow is complete you often need to establish a session cookie for your own application as well as a session cookie for Okta before visiting your landing page.  This is accomplished by returning a HTTP redirect status code for the login response that includes both your app's session cookie as well as the completed URI template with the one-time token for the Okta session redirect URL:
 `https://your-subdomain.okta.com/login/sessionCookieRedirect?token={cookieToken}&redirectUrl={redirectUrl}`
 
-> Only the Okta session redirect URL with one-time token is required
+> Only the Okta session redirect URL with one-time token is required.
 
 ~~~ ruby
 HTTP/1.1 302 Moved Temporarily
